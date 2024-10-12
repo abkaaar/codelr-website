@@ -1,0 +1,124 @@
+@import url("https://fonts.cdnfonts.com/css/tiempos-headline");
+
+:root {
+  --darkish: #111;
+  /* --primary: #202054; */
+  --primary: #3532A7;
+  --secondary: #f0b73f;
+  --clear: #fffcf9;
+  --grey: #141a29;
+  --light_grey: #636a7d;
+  --lighestgrey: #ebebeb;
+  --axiagrey: #bdbdbd;
+  --brown: #faf5ee;
+  --darkgrey: #3f3f3f;
+  --light_red: #ab2638;
+}
+@font-face {
+  font-family: avenir;
+  src: url(/avenir.ttf);
+}
+body {
+  background-color: var(--clear);
+  font-family: avenir, sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: "Tiempos Headline", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  /* height: 0.4rem; */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--clear);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--darkgrey);
+  border-radius: 5rem;
+}
+
+.btn-primary {
+  box-shadow: 8px 8px var(--darkish);
+  border: 3px solid var(--darkish);
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  color: var(--darkish);
+  font-weight: 600;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  display: block;
+  width: fit-content;
+}
+.btn-primary:hover {
+  background: var(--grey);
+  box-shadow: 8.75px 8.75px var(--secondary);
+  color: var(--clear);
+}
+
+.btn-secondary {
+  box-shadow: 8px 8px white;
+  border: 3px solid white;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  font-weight: 600;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  display: block;
+  width: fit-content;
+}
+.btn-secondary:hover {
+  background: white;
+  box-shadow: 8.75px 8.75px var(--secondary);
+  color: var(--darkgrey);
+}
+
+.gradient {
+  background-image: linear-gradient(65deg, var(--light_red), var(--secondary));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(2.1875rem);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce {
+  animation: bounce 12s infinite;
+}
+
+.animate-show {
+  animation: popup 700ms forwards;
+}
+
+@keyframes popup {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
